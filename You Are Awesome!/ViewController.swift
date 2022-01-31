@@ -21,23 +21,28 @@ class ViewController: UIViewController {
 
     @IBAction func messageButtonPressed(_ sender: UIButton) {
         
-        let messages = ["You Are Awesome!", "You Are Great!", "You Are Da Bomb!"]
-        messageLabel.text = messages[messageNumber]
+        let messages = ["You Are Awesome!",
+                        "You Are Great!",
+                        "You Are Da Bomb!",
+                        "When the Genius Bar Needs Help They Call You!",
+                        "You Are Fantastic!"]
         
-        let imageName = "image\(imageNumber)"
-        imageView.image = UIImage(named: imageName)
+        messageLabel.text = messages[Int.random(in: 0...messages.count-1)]
+        imageView.image = UIImage(named: "image\(Int.random(in: 0...9))")
         
-        if messageNumber == (messages.count - 1) {
-            messageNumber = 0
-        } else {
-            messageNumber += 1
-        }
         
-        if imageNumber == 9 {
-            imageNumber = 0
-        } else {
-            imageNumber += 1
-        }
+        
+//        if messageNumber == (messages.count - 1) {
+//            messageNumber = 0
+//        } else {
+//            messageNumber += 1
+//        }
+//
+//        if imageNumber == 9 {
+//            imageNumber = 0
+//        } else {
+//            imageNumber += 1
+//        }
         
 //        let awesomeMessage = "You Are Awesome!"
 //        let greatMessage = "You Are Great!"
